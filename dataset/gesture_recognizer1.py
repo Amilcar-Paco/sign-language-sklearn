@@ -241,9 +241,9 @@ def improve_Classifier_using_HNM(hog_list, label_list, frame, imgset, threshold=
         
         if no_of_false_positives == 0:
             return model
-        
-        print "Iteration {0} - No_of_false_positives: {1}".format(i, no_of_false_positives) 
-        
+
+        print("Iteration {0} - No_of_false_positives: {1}".format(i, no_of_false_positives))
+
         if no_of_false_positives <= threshold:
             return model
         

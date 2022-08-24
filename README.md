@@ -1,10 +1,9 @@
 ## Sign Language and Static-Gesture Recognition using scikit-learn
 
-Do check out my [blog post explaining the project](https://medium.freecodecamp.org/weekend-projects-sign-language-and-static-gesture-recognition-using-scikit-learn-60813d600e79)! 
 
-To use the code in /dataset/gesture_recognizer1.py or the code in /dataset/pipeline_final.ipynb, download the Dataset.zip file and extract the data into the folder containing the above code.
+Para usar o codigo em /dataset/gesture_recognizer1.py or the code in /dataset/pipeline_final.ipynb, faça o downlaod do arquivo Dataset.zip e extraia os dados na pasta que contrib o código acima.
 
-That is, your folder structure should be:
+Ou seja, sua estrutura de pastas deve ser:
 ```
 /home/../../dataset
        |----gesture_recognizer1.py
@@ -29,13 +28,9 @@ That is, your folder structure should be:
        |---- ...
 ```
 
-Using gesture_recognizer1.py:
+Usando gesture_recognizer1.py:
 
-1. Modify the main function in gesture_recognizer1.py to use the correct list of users. Train and save the gesture recognizer. (Uncomment the lines in main() accordingly)
-https://github.com/mon95/Sign-Language-and-Static-gesture-recognition-using-sklearn/blob/master/dataset/gesture_recognizer1.py#L509
+1. Modifique a função principal em gesture_recognizer1.py para usar a lista correta de usuários. Treine e salve o reconhecedor de gestos.
 
-2. Then, use the load_model method to load the previously saved gesture recognizer objec. Now, the test images, can be tested using the recognize_gesture function. 
+2. Depois, use o método load_model  method para carregar o objeto reconhecedor de gestos salvo anteriormente. Agora, as imagens de teste podem ser testadas usando a função recognize_gesture. 
 
-The functions in the pipeline_final.ipynb ipython notebook can be used to build your own pipeline using various classifier combinations from the scikit learn toolbox.
-
-A slightly more detailed explanation here: https://github.com/mon95/Sign-Language-and-Static-gesture-recognition-using-sklearn/issues/3 

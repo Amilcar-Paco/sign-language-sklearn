@@ -364,17 +364,17 @@ class GestureRecognizer(object):
             The train function should train all your classifiers
             both binary and multiclass on the given list of users
         """
-        print "Train starts"
+        print("Train starts")
         # Load data for the binary (hand/not hand) classification task
         imageset, boundbox, hog_list, label_list = load_binary_data(train_list, self.data_directory)
 
-        print "Imageset, boundbox, hog_list,label_list Loaded!"
+        print
+        'Imageset, boundbox, hog_list,label_list Loaded!'
 
         # Load data for the multiclass classification task
         X_mul,Y_mul = get_data(train_list, imageset, self.data_directory)
 
-        print "Multiclass data loaded"
-       
+        print("Multiclass data loaded")
 
         Y_mul = self.label_encoder.fit_transform(Y_mul)
 
@@ -382,7 +382,8 @@ class GestureRecognizer(object):
             # Build binary classifier for hand-nothand classification
             self.handDetector = improve_Classifier_using_HNM(hog_list, label_list, boundbox, imageset, threshold=40, max_iterations=35)
 
-        print "handDetector trained "
+        print
+        'handDetector trained '
 
         # Multiclass classification part to classify the various signs/hand gestures CHECK. TODO.
         
@@ -390,8 +391,7 @@ class GestureRecognizer(object):
             svcmodel = SVC(kernel='linear', C=0.9, probability=True)
             self.signDetector = svcmodel.fit(X_mul, Y_mul)
 
-
-        print "sign Detector trained "
+        print("sign Detector trained ")
 
         # dumpclassifier('handDetector.pkl', self.handDetector)
         

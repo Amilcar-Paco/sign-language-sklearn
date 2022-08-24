@@ -457,6 +457,8 @@ class GestureRecognizer(object):
         for sc in scales:
             detectedBoxes.append(image_pyramid_step(self.handDetector, image, scale=sc))
 
+        # In Python 3, the xrange function was removed. So Mr. Ivan add xrange=range to your code.
+        xrange = range
         side = [0 for i in xrange(len(scales))]
         for i in xrange(len(scales)):
             side[i] = 128 / scales[i]
